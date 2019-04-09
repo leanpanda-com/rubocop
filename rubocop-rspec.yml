@@ -1,0 +1,25 @@
+inherit_from: https://gitlab.cantierecreativo.net/cantiere/lint/raw/master/rubocop.yml
+require: rubocop-rspec
+
+Metrics/BlockLength:
+  ExcludedMethods:
+    - context
+    - describe
+    - feature
+    - shared_examples
+    - shared_examples_for
+
+RSpec/DescribeClass:
+  Exclude:
+    - spec/*
+    - spec/features/**/*
+RSpec/LetSetup:
+  Enabled: false
+RSpec/MultipleExpectations:
+  Exclude:
+    - spec/features/**/*
+RSpec/NamedSubject:
+  Enabled: false
+RSpec/NotToNot:
+  Enabled: false
+
