@@ -1,4 +1,4 @@
-inherit_from: https://gitlab.cantierecreativo.net/cantiere/lint/raw/master/rubocop.yml
+inherit_from: https://raw.githubusercontent.com/leanpanda-com/rubocop/master/rubocop.yml
 require: rubocop-rspec
 
 Metrics/BlockLength:
