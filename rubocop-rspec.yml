@@ -13,6 +13,7 @@ RSpec/DescribeClass:
   Exclude:
     - spec/*
     - spec/features/**/*
+    - spec/requests/**/*
 RSpec/LetSetup:
   Enabled: false
 RSpec/MultipleExpectations:
