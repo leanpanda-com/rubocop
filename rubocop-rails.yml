@@ -1,0 +1,3 @@
+inherit_from:
+  - https://raw.githubusercontent.com/leanpanda-com/rubocop/master/rubocop.yml
+  - https://raw.githubusercontent.com/leanpanda-com/rubocop/master/rubocop-rspec.yml
