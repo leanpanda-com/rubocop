@@ -1,3 +1,17 @@
 inherit_from:
   - https://raw.githubusercontent.com/leanpanda-com/rubocop/master/rubocop.yml
   - https://raw.githubusercontent.com/leanpanda-com/rubocop/master/rubocop-rspec.yml
+
+AllCops:
+  Exclude:
+    - "db/schema.rb"
+
+Metrics/AbcSize:
+  Exclude:
+    - "db/migrate/*"
+Metrics/BlockLength:
+  Exclude:
+    - "db/seeds.rb"
+Metrics/MethodLength:
+  Exclude:
+    - "db/migrate/*"
