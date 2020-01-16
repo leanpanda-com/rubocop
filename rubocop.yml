@@ -6,7 +6,7 @@ AllCops:
     - "node_modules/**/*"
   TargetRubyVersion: 2.3
 
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
 Layout/DotPosition:
   EnforcedStyle: trailing
