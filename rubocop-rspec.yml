@@ -9,6 +9,15 @@ Metrics/BlockLength:
     - shared_examples
     - shared_examples_for
 
+RSpec/ContextWording:
+  Prefixes:
+    - and
+    - for
+    - if
+    - unless
+    - when
+    - with
+    - without
 RSpec/DescribeClass:
   Exclude:
     - spec/*
