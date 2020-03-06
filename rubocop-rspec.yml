@@ -1,3 +1,5 @@
+require: rubocop-rspec
+
 AllCops:
   Exclude:
     - "bin/**/*"
@@ -43,16 +45,6 @@ Style/StringLiterals:
   EnforcedStyle: double_quotes
 Style/SymbolArray:
   Enabled: false
-
-require: rubocop-rspec
-
-Metrics/BlockLength:
-  ExcludedMethods:
-    - context
-    - describe
-    - feature
-    - shared_examples
-    - shared_examples_for
 
 RSpec/DescribeClass:
   Exclude:
