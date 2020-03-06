@@ -1,5 +1,19 @@
-inherit_from: https://raw.githubusercontent.com/leanpanda-com/rubocop/master/rubocop.yml
 require: rubocop-rspec
+
+AllCops:
+  Exclude:
+    - "bin/**/*"
+    - ".bundle/**/*"
+    - "bundle/**/*"
+    - "node_modules/**/*"
+  TargetRubyVersion: 2.3
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+Layout/DotPosition:
+  EnforcedStyle: trailing
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
 
 Metrics/BlockLength:
   ExcludedMethods:
@@ -8,6 +22,29 @@ Metrics/BlockLength:
     - feature
     - shared_examples
     - shared_examples_for
+    - namespace
+    - draw
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+Style/Documentation:
+  Enabled: false
+Style/EmptyCaseCondition:
+  Enabled: false
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/Lambda:
+  EnforcedStyle: literal
+Style/NegatedIf:
+  Enabled: false
+Style/PercentLiteralDelimiters:
+  Enabled: false
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/SymbolArray:
+  Enabled: false
 
 RSpec/DescribeClass:
   Exclude:
@@ -23,4 +60,3 @@ RSpec/NamedSubject:
   Enabled: false
 RSpec/NotToNot:
   Enabled: false
-

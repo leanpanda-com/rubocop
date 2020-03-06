@@ -1,18 +1,72 @@
-inherit_from:
-  - https://raw.githubusercontent.com/leanpanda-com/rubocop/master/rubocop.yml
-  - https://raw.githubusercontent.com/leanpanda-com/rubocop/master/rubocop-rspec.yml
+require: rubocop-rspec
 
 AllCops:
   Exclude:
+    - ".bundle/**/*"
     - "bin/**/*"
+    - "bundle/**/*"
     - "db/schema.rb"
+    - "node_modules/**/*"
+  TargetRubyVersion: 2.3
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+Layout/DotPosition:
+  EnforcedStyle: trailing
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+Metrics/BlockLength:
+  Exclude:
+    - "db/seeds.rb"
+  ExcludedMethods:
+    - context
+    - describe
+    - feature
+    - shared_examples
+    - shared_examples_for
+    - namespace
+    - draw
 
 Metrics/AbcSize:
   Exclude:
     - "db/migrate/*"
-Metrics/BlockLength:
-  Exclude:
-    - "db/seeds.rb"
 Metrics/MethodLength:
   Exclude:
     - "db/migrate/*"
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+Style/Documentation:
+  Enabled: false
+Style/EmptyCaseCondition:
+  Enabled: false
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/Lambda:
+  EnforcedStyle: literal
+Style/NegatedIf:
+  Enabled: false
+Style/PercentLiteralDelimiters:
+  Enabled: false
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/SymbolArray:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Exclude:
+    - spec/*
+    - spec/features/**/*
+    - spec/requests/**/*
+RSpec/LetSetup:
+  Enabled: false
+RSpec/MultipleExpectations:
+  Exclude:
+    - spec/features/**/*
+RSpec/NamedSubject:
+  Enabled: false
+RSpec/NotToNot:
+  Enabled: false
